@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+    <header>
+        <h1>BIENVENIDO A MI BLOG DE ANIME</h1>
+        <nav>
+            <ul>
+                <li><a href="index1.html">INICIO</a></li>
+                <li><a href="index4.html">SOBRE LA AUTORA</a></li>
+                <li><a href="index2.html">ANIMES RECOMENDADOS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="animes">
+            <h2>CONTACTO</h2>
+            <img src="img/kero sakura.jpg" class="kero">
+            <article>
+                <form action="/submit_form.php" method="post" onsubmit="return validaforms()">
+                <p><h2 class="letra">Si queres contactarme podes escribirme un mensaje por aqui: </h2></p>
+                <label for="nombre" class="n">NOMBRE:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br>
+                <label for="Correo">CORREO ELECTRONICO:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">MENSAJE:</label><br>
+                <textarea name="message" id="message" rows="30" cols="60" required></textarea><br>
+                <a href="index6.html" class="bt">Enviar</a>
+                </form>
+                <script>
+                    function validaforms() {
+                        var name = document.getElementById('name').value;
+                        var email = document.getElementById('email').value;
+                        if (name === '' || email === '') {
+                            alert('Por favor, complete todos los campos.');
+                            return false;
+                        }
+                        return true;
+                    }
+                </script>
+            </article>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
